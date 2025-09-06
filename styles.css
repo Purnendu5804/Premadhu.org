@@ -50,6 +50,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 130px;
+    gap: 60px; /* Added gap between logo and menu */
 }
 
 .nav-logo {
@@ -58,6 +59,7 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary-color);
+    flex-shrink: 0; /* Prevent logo from shrinking */
 }
 
 .nav-logo img {
@@ -74,6 +76,7 @@ body {
     margin: 0;
     padding: 0;
     gap: 30px;
+    margin-left: auto; /* Push menu items to the right */
 }
 
 .nav-item {
@@ -711,6 +714,78 @@ body {
     color: #B0B0B0;
 }
 
+/* Team Section */
+.team {
+    background: var(--white);
+    padding: 80px 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.team-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: var(--primary-color);
+}
+
+.team-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--primary-color);
+    position: relative;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.1);
+}
+
+.team-info h3 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.team-info h4 {
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-info p {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
@@ -815,6 +890,28 @@ body {
     .feedback-form {
         margin: 0 20px;
         padding: 30px 20px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .team-card {
+        padding: 25px 20px;
+    }
+
+    .team-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .team-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .team-info h4 {
+        font-size: 0.9rem;
     }
 }
 
