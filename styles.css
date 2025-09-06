@@ -792,10 +792,27 @@ body {
         display: flex;
     }
 
+    .nav-container {
+        height: 80px;
+        gap: 20px;
+    }
+
+    .nav-logo {
+        font-size: 0.9rem;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .nav-logo img {
+        width: 60px;
+        height: 60px;
+        margin-right: 8px;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 130px;
+        top: 80px;
         flex-direction: column;
         background-color: var(--white);
         width: 100%;
@@ -820,21 +837,8 @@ body {
         padding: 10px 20px;
     }
 
-    .nav-logo {
-        font-size: 1.2rem;
-    }
-
-    .nav-logo img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .nav-container {
-        height: 100px;
-    }
-
     .hero {
-        padding: 150px 0 60px;
+        padding: 120px 0 60px;
     }
 
     .hero-content {
@@ -916,6 +920,28 @@ body {
 }
 
 @media (max-width: 480px) {
+    .nav-container {
+        padding: 0 15px;
+        gap: 10px;
+    }
+
+    .nav-logo {
+        font-size: 0.75rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .nav-logo img {
+        width: 50px;
+        height: 50px;
+        margin-right: 5px;
+    }
+
+    .hamburger {
+        flex-shrink: 0;
+    }
+
     .hero-text h1 {
         font-size: 2rem;
     }
@@ -924,12 +950,8 @@ body {
         padding: 0 15px;
     }
 
-    .nav-container {
-        padding: 0 15px;
-    }
-
     .hero {
-        padding: 150px 0 60px;
+        padding: 110px 0 60px;
     }
 
     .section-header h2 {
