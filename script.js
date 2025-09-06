@@ -13,41 +13,16 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
     navMenu.classList.remove('active');
 }));
 
-<!-- ...existing code... -->
-
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#mission" class="nav-link">Mission</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#work" class="nav-link">Our Work</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#get-involved" class="nav-link">Get Involved</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#feedback" class="nav-link">Feedback</a>
-                </li>
-            </ul>
-
-<!-- ...existing code... -->// Smooth scrolling for navigation links
+// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const offsetTop = target.offsetTop - 130; // Adjust for navbar height
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
             });
         }
     });
