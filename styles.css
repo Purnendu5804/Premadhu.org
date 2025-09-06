@@ -506,64 +506,78 @@ body {
 
 /* Contact Section */
 .contact {
-    padding: 100px 0;
     background: var(--white);
+    padding: 80px 0;
 }
 
-.contact-content {
+.contact-info {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .contact-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 30px;
+    gap: 20px;
+    text-align: left;
 }
 
 .contact-icon {
+    background: var(--primary-color);
+    color: var(--white);
     width: 60px;
     height: 60px;
-    background: var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
     flex-shrink: 0;
 }
 
 .contact-icon i {
     font-size: 1.5rem;
-    color: var(--white);
 }
 
 .contact-details h3 {
+    font-size: 1.2rem;
     color: var(--text-dark);
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .contact-details p {
     color: var(--text-light);
     line-height: 1.6;
+    margin-bottom: 5px;
 }
 
-.contact-form {
+/* Feedback Section */
+.feedback {
     background: var(--background-light);
+    padding: 80px 0;
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
     padding: 40px;
-    border-radius: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 15px;
-    border: 1px solid #E5E5E5;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
     border-radius: 10px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
@@ -574,12 +588,7 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-}
-
-/* Contact Section */
-.contact {
-    padding: 100px 0;
-    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
 }
 
 /* Footer */
@@ -754,6 +763,16 @@ body {
     .donation-amounts {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .feedback-form {
+        margin: 0 20px;
+        padding: 30px 20px;
     }
 }
 
