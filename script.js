@@ -253,6 +253,8 @@ document.querySelectorAll('.social-links a').forEach((link, index) => {
         e.preventDefault();
         if (index < 2) { // Only for Facebook and Twitter
             shareOnSocialMedia(platforms[index]);
+        } else if (platforms[index] === 'youtube') {
+            window.open('https://www.youtube.com/channel/UCzKig-ZmeHKi60BREPDs3FQ', '_blank');
         }
     });
 });
