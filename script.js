@@ -251,8 +251,10 @@ document.querySelectorAll('.social-links a').forEach((link, index) => {
     const platforms = ['facebook', 'twitter', 'instagram', 'youtube'];
     link.addEventListener('click', (e) => {
         e.preventDefault();
-        if (index < 2) { // Only for Facebook and Twitter
-            shareOnSocialMedia(platforms[index]);
+        if (platforms[index] === 'facebook') {
+            shareOnSocialMedia('facebook');
+        } else if (platforms[index] === 'twitter') {
+            window.open('https://x.com/Premadhu2025', '_blank');
         } else if (platforms[index] === 'youtube') {
             window.open('https://www.youtube.com/channel/UCzKig-ZmeHKi60BREPDs3FQ', '_blank');
         }
